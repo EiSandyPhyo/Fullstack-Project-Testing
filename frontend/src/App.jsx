@@ -1,11 +1,26 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
+  const [ message, setMessage ] = useState('');
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('http://localhost:5001/api/hello');
+        const data = await response.json();
+        setMessage(data.message);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   return (
     <>
@@ -17,6 +32,7 @@ function App() {
         </div>
         <div>
           <h1>Welcome DiDi</h1>
+          <p style={{ color: 'red' }}>{message}</p> <br />
           <p>
             Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
           </p>
