@@ -33,7 +33,7 @@ const apiBase = import.meta.env.VITE_API_URL;
           <img src={viteLogo} className="vite" alt="Vite logo" />
         </div>
         <div>
-          <h1>Welcome DiDi</h1>
+          <h1>Welcome Sandy yay!!!</h1>
           <p style={{ color: 'red' }}>{message}</p> <br />
           <p>
             Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
