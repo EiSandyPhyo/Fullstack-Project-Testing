@@ -7,7 +7,7 @@ CORS(app, origins=["https://fullstack-project-testing.vercel.app"])  # Allow COR
 
 @app.route('/api/hello')
 def hello():
-    return jsonify({"message": "Hello DiDi from Flask backend!"})    
+    return jsonify({"message": "Hello Sandy from Flask backend!"})    
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5001)), debug=True)
