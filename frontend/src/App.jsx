@@ -11,7 +11,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://fullstack-project-testing.onrender.com/api/hello');
+        const response = await fetch('http://127.0.0.1:5001/api/hello');
         const data = await response.json();
         setMessage(data.message);
       } catch (error) {
