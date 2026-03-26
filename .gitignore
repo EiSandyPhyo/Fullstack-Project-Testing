@@ -1,6 +1,3 @@
-# Ignore frontend completely
-frontend/
-
 # Node modules
 frontend/node_modules/
 
