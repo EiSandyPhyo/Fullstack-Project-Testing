@@ -8,12 +8,14 @@ function App() {
   const [count, setCount] = useState(0);
   const [ message, setMessage ] = useState('');
 
-const apiBase = import.meta.env.VITE_API_URL;
-
   useEffect(() => {
     const fetchData = async () => {
       try {
+        const apiBase = import.meta.env.VITE_API_URL;
         const response = await fetch(`${apiBase}/api/hello`);
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
         const data = await response.json();
         setMessage(data.message);
       } catch (error) {
@@ -33,7 +35,7 @@ const apiBase = import.meta.env.VITE_API_URL;
           <img src={viteLogo} className="vite" alt="Vite logo" />
         </div>
         <div>
-          <h1>Welcome Sandy yay!!!</h1>
+          <h1>Welcome DiDo!!!</h1>
           <p style={{ color: 'red' }}>{message}</p> <br />
           <p>
             Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
