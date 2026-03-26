@@ -8,10 +8,12 @@ function App() {
   const [count, setCount] = useState(0);
   const [ message, setMessage ] = useState('');
 
+const apiBase = import.meta.env.VITE_API_URL;
+
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://127.0.0.1:5001/api/hello');
+        const response = await fetch(`${apiBase}/api/hello`);
         const data = await response.json();
         setMessage(data.message);
       } catch (error) {
