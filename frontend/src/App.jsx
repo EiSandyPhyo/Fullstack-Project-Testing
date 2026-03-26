@@ -35,7 +35,7 @@ function App() {
           <img src={viteLogo} className="vite" alt="Vite logo" />
         </div>
         <div>
-          <h1>Welcome DiDo!!!</h1>
+          <h1>MinGaLarPar Phyo Phyo Yay!!!</h1>
           <p style={{ color: 'red' }}>{message}</p> <br />
           <p>
             Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
