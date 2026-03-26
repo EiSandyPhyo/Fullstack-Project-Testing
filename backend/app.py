@@ -3,7 +3,7 @@ from flask_cors import CORS
 import os
 
 app = Flask(__name__)
-CORS(app, origins=["https://fullstack-project-testing.vercel.app"])  # Allow CORS for the React frontend
+CORS(app)  # , origins=["https://fullstack-project-testing.vercel.app"] #Allow CORS for the React frontend
 
 @app.route('/')
 def home():
